@@ -44,6 +44,7 @@ class ViewController:
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         // This has a default value of best, can we clean this up be excluding this line?
+        // This data is already available from the pinging done on the homepage. Can that value be pulled in when create memory button is pressed. Users should not be moving around too much when creating a memory.
         locationManager.startUpdatingLocation()
         // Continually checks current location.
         

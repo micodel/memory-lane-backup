@@ -11,23 +11,31 @@ import CoreLocation
 
 class ViewControllerHome: UIViewController, UINavigationControllerDelegate , UITextFieldDelegate, CLLocationManagerDelegate {
 
-
+    // This is the +1 (memory found) icon
     @IBOutlet var changeMemImage : UIImageView
     
     let locationManager = CLLocationManager()
+    // (re)Defines textHacker string to empty, Used to hide plusOneIcon or not.
+    // Can we change this to a boolean variable instead of keeping entire image JSON object as a string?
     var textHacker = ""
     
     // after the view loads, start getting location
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Hides the navigation bar inheriteted from the navigation controller.
         self.navigationController.navigationBar.hidden = true;
+        // Is this line useless?
         self.textHacker != ""
+        // Does not display plusOneIcon
         self.changeMemImage.hidden = true
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        // Keeps reloading user location, to be used in finding a memory and deciding to display plusOneIcon.
         locationManager.startUpdatingLocation()
         
         weak var weakSelf : ViewControllerHome? = self;
+        
+        // Storing lat and long into variables. This is (re)done in other views. Could it be consolidated?
         var myLat = locationManager.location.coordinate.latitude
         var myLong = locationManager.location.coordinate.longitude
         
