@@ -1,0 +1,657 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		091489A4194CE20F008D2E38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091489A3194CE20F008D2E38 /* AppDelegate.swift */; };
+		091489A6194CE20F008D2E38 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091489A5194CE20F008D2E38 /* ViewController.swift */; };
+		091489A9194CE20F008D2E38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 091489A7194CE20F008D2E38 /* Main.storyboard */; };
+		091489AB194CE20F008D2E38 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 091489AA194CE20F008D2E38 /* Images.xcassets */; };
+		091489B7194CE20F008D2E38 /* cameratakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091489B6194CE20F008D2E38 /* cameratakerTests.swift */; };
+		0982981C194D41D000BB798F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0982981B194D41D000BB798F /* CoreLocation.framework */; };
+		09890D0B194F731800E2BC76 /* ViewControllerHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09890D0A194F731800E2BC76 /* ViewControllerHome.swift */; };
+		098F0480194E868B004FBE48 /* ViewControllerGet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098F047F194E868B004FBE48 /* ViewControllerGet.swift */; };
+		098F64F019522727008BA181 /* checkboxgreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 098F64EE19522727008BA181 /* checkboxgreen.png */; };
+		098F64F119522727008BA181 /* checkboxgreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 098F64EF19522727008BA181 /* checkboxgreen@2x.png */; };
+		098F64F419522736008BA181 /* photoicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 098F64F219522736008BA181 /* photoicon.png */; };
+		098F64F519522736008BA181 /* photoicon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 098F64F319522736008BA181 /* photoicon@2x.png */; };
+		098F64F819522744008BA181 /* checkboxgrey.png in Resources */ = {isa = PBXBuildFile; fileRef = 098F64F619522744008BA181 /* checkboxgrey.png */; };
+		098F64F919522744008BA181 /* checkboxgrey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 098F64F719522744008BA181 /* checkboxgrey@2x.png */; };
+		098F64FF195257CC008BA181 /* wallpaper.png in Resources */ = {isa = PBXBuildFile; fileRef = 098F64FD195257CC008BA181 /* wallpaper.png */; };
+		098F6500195257CC008BA181 /* wallpaper@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 098F64FE195257CC008BA181 /* wallpaper@2x.png */; };
+		098F6504195257E9008BA181 /* title.png in Resources */ = {isa = PBXBuildFile; fileRef = 098F6502195257E9008BA181 /* title.png */; };
+		098F6505195257E9008BA181 /* title@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 098F6503195257E9008BA181 /* title@2x.png */; };
+		098F650A195272D0008BA181 /* head.png in Resources */ = {isa = PBXBuildFile; fileRef = 098F6508195272D0008BA181 /* head.png */; };
+		098F650B195272D0008BA181 /* head@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 098F6509195272D0008BA181 /* head@2x.png */; };
+		098F650F195272E5008BA181 /* hands.png in Resources */ = {isa = PBXBuildFile; fileRef = 098F650D195272E5008BA181 /* hands.png */; };
+		098F6510195272E5008BA181 /* hands@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 098F650E195272E5008BA181 /* hands@2x.png */; };
+		098F651319527326008BA181 /* checkboxblack.png in Resources */ = {isa = PBXBuildFile; fileRef = 098F651119527326008BA181 /* checkboxblack.png */; };
+		098F651419527326008BA181 /* checkboxblack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 098F651219527326008BA181 /* checkboxblack@2x.png */; };
+		59B7D7FC6F4F422B81341ACF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 22DD41AECA8B4A1C987F198A /* libPods.a */; };
+		F1B587F219533A7500BC1FF6 /* plusone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F1B587F119533A7500BC1FF6 /* plusone@2x.png */; };
+		F1B587F419533B3E00BC1FF6 /* plusone.png in Resources */ = {isa = PBXBuildFile; fileRef = F1B587F319533B3E00BC1FF6 /* plusone.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		091489B1194CE20F008D2E38 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09148996194CE20F008D2E38 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0914899D194CE20F008D2E38;
+			remoteInfo = camerataker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0914899E194CE20F008D2E38 /* camerataker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = camerataker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		091489A2194CE20F008D2E38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		091489A3194CE20F008D2E38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		091489A5194CE20F008D2E38 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		091489A8194CE20F008D2E38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		091489AA194CE20F008D2E38 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		091489B0194CE20F008D2E38 /* cameratakerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cameratakerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		091489B5194CE20F008D2E38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		091489B6194CE20F008D2E38 /* cameratakerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cameratakerTests.swift; sourceTree = "<group>"; };
+		0982981B194D41D000BB798F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		09890D0A194F731800E2BC76 /* ViewControllerHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerHome.swift; sourceTree = "<group>"; };
+		098F047E194D63D9004FBE48 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
+		098F047F194E868B004FBE48 /* ViewControllerGet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewControllerGet.swift; path = ../ViewControllerGet.swift; sourceTree = "<group>"; };
+		098F64EE19522727008BA181 /* checkboxgreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkboxgreen.png; sourceTree = "<group>"; };
+		098F64EF19522727008BA181 /* checkboxgreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkboxgreen@2x.png"; sourceTree = "<group>"; };
+		098F64F219522736008BA181 /* photoicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photoicon.png; sourceTree = "<group>"; };
+		098F64F319522736008BA181 /* photoicon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photoicon@2x.png"; sourceTree = "<group>"; };
+		098F64F619522744008BA181 /* checkboxgrey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkboxgrey.png; sourceTree = "<group>"; };
+		098F64F719522744008BA181 /* checkboxgrey@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkboxgrey@2x.png"; sourceTree = "<group>"; };
+		098F64FD195257CC008BA181 /* wallpaper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wallpaper.png; sourceTree = "<group>"; };
+		098F64FE195257CC008BA181 /* wallpaper@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wallpaper@2x.png"; sourceTree = "<group>"; };
+		098F6502195257E9008BA181 /* title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title.png; sourceTree = "<group>"; };
+		098F6503195257E9008BA181 /* title@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "title@2x.png"; sourceTree = "<group>"; };
+		098F6508195272D0008BA181 /* head.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = head.png; sourceTree = "<group>"; };
+		098F6509195272D0008BA181 /* head@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "head@2x.png"; sourceTree = "<group>"; };
+		098F650D195272E5008BA181 /* hands.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hands.png; sourceTree = "<group>"; };
+		098F650E195272E5008BA181 /* hands@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hands@2x.png"; sourceTree = "<group>"; };
+		098F651119527326008BA181 /* checkboxblack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkboxblack.png; sourceTree = "<group>"; };
+		098F651219527326008BA181 /* checkboxblack@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkboxblack@2x.png"; sourceTree = "<group>"; };
+		09AEB137195114DD00BC1600 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		09D725B8195117CA00A0BBFA /* camerataker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "camerataker-Bridging-Header.h"; sourceTree = "<group>"; };
+		22DD41AECA8B4A1C987F198A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9034BAB0F0A4133A7133947 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		F1B587F119533A7500BC1FF6 /* plusone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plusone@2x.png"; sourceTree = "<group>"; };
+		F1B587F319533B3E00BC1FF6 /* plusone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plusone.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0914899B194CE20F008D2E38 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0982981C194D41D000BB798F /* CoreLocation.framework in Frameworks */,
+				59B7D7FC6F4F422B81341ACF /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		091489AD194CE20F008D2E38 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		09148995194CE20F008D2E38 = {
+			isa = PBXGroup;
+			children = (
+				09AEB137195114DD00BC1600 /* Podfile */,
+				0982981B194D41D000BB798F /* CoreLocation.framework */,
+				091489A0194CE20F008D2E38 /* camerataker */,
+				091489B3194CE20F008D2E38 /* cameratakerTests */,
+				0914899F194CE20F008D2E38 /* Products */,
+				B9034BAB0F0A4133A7133947 /* Pods.xcconfig */,
+				EDAF98F4D0B44DE78994A09C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0914899F194CE20F008D2E38 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0914899E194CE20F008D2E38 /* camerataker.app */,
+				091489B0194CE20F008D2E38 /* cameratakerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		091489A0194CE20F008D2E38 /* camerataker */ = {
+			isa = PBXGroup;
+			children = (
+				098F64E8195226AC008BA181 /* Assets */,
+				091489A3194CE20F008D2E38 /* AppDelegate.swift */,
+				091489A5194CE20F008D2E38 /* ViewController.swift */,
+				098F047F194E868B004FBE48 /* ViewControllerGet.swift */,
+				09890D0A194F731800E2BC76 /* ViewControllerHome.swift */,
+				091489A7194CE20F008D2E38 /* Main.storyboard */,
+				091489AA194CE20F008D2E38 /* Images.xcassets */,
+				098F047E194D63D9004FBE48 /* MyPlayground.playground */,
+				091489A1194CE20F008D2E38 /* Supporting Files */,
+				09D725B8195117CA00A0BBFA /* camerataker-Bridging-Header.h */,
+			);
+			path = camerataker;
+			sourceTree = "<group>";
+		};
+		091489A1194CE20F008D2E38 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				091489A2194CE20F008D2E38 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		091489B3194CE20F008D2E38 /* cameratakerTests */ = {
+			isa = PBXGroup;
+			children = (
+				091489B6194CE20F008D2E38 /* cameratakerTests.swift */,
+				091489B4194CE20F008D2E38 /* Supporting Files */,
+			);
+			path = cameratakerTests;
+			sourceTree = "<group>";
+		};
+		091489B4194CE20F008D2E38 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				091489B5194CE20F008D2E38 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		098F64E8195226AC008BA181 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				098F64FC195257B6008BA181 /* Wallpaper */,
+				098F6501195257D1008BA181 /* Title */,
+				098F650C195272D9008BA181 /* Hands */,
+				F1B587EE19533A1D00BC1FF6 /* Plus One */,
+				098F6507195272B4008BA181 /* Head */,
+				098F64EA195226C3008BA181 /* Photo Icon */,
+				098F64E9195226B4008BA181 /* Checkmark Icons */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		098F64E9195226B4008BA181 /* Checkmark Icons */ = {
+			isa = PBXGroup;
+			children = (
+				098F650619527244008BA181 /* Checkmark Disabled */,
+				098F64ED195226F6008BA181 /* Checkmark Highlighted */,
+				098F64EC195226ED008BA181 /* Checkmark Rest */,
+			);
+			name = "Checkmark Icons";
+			sourceTree = "<group>";
+		};
+		098F64EA195226C3008BA181 /* Photo Icon */ = {
+			isa = PBXGroup;
+			children = (
+				098F64F219522736008BA181 /* photoicon.png */,
+				098F64F319522736008BA181 /* photoicon@2x.png */,
+			);
+			name = "Photo Icon";
+			sourceTree = "<group>";
+		};
+		098F64EC195226ED008BA181 /* Checkmark Rest */ = {
+			isa = PBXGroup;
+			children = (
+				098F64EE19522727008BA181 /* checkboxgreen.png */,
+				098F64EF19522727008BA181 /* checkboxgreen@2x.png */,
+			);
+			name = "Checkmark Rest";
+			sourceTree = "<group>";
+		};
+		098F64ED195226F6008BA181 /* Checkmark Highlighted */ = {
+			isa = PBXGroup;
+			children = (
+				098F64F619522744008BA181 /* checkboxgrey.png */,
+				098F64F719522744008BA181 /* checkboxgrey@2x.png */,
+			);
+			name = "Checkmark Highlighted";
+			sourceTree = "<group>";
+		};
+		098F64FC195257B6008BA181 /* Wallpaper */ = {
+			isa = PBXGroup;
+			children = (
+				098F64FD195257CC008BA181 /* wallpaper.png */,
+				098F64FE195257CC008BA181 /* wallpaper@2x.png */,
+			);
+			name = Wallpaper;
+			sourceTree = "<group>";
+		};
+		098F6501195257D1008BA181 /* Title */ = {
+			isa = PBXGroup;
+			children = (
+				098F6502195257E9008BA181 /* title.png */,
+				098F6503195257E9008BA181 /* title@2x.png */,
+			);
+			name = Title;
+			sourceTree = "<group>";
+		};
+		098F650619527244008BA181 /* Checkmark Disabled */ = {
+			isa = PBXGroup;
+			children = (
+				098F651119527326008BA181 /* checkboxblack.png */,
+				098F651219527326008BA181 /* checkboxblack@2x.png */,
+			);
+			name = "Checkmark Disabled";
+			sourceTree = "<group>";
+		};
+		098F6507195272B4008BA181 /* Head */ = {
+			isa = PBXGroup;
+			children = (
+				098F6508195272D0008BA181 /* head.png */,
+				098F6509195272D0008BA181 /* head@2x.png */,
+			);
+			name = Head;
+			sourceTree = "<group>";
+		};
+		098F650C195272D9008BA181 /* Hands */ = {
+			isa = PBXGroup;
+			children = (
+				098F650D195272E5008BA181 /* hands.png */,
+				098F650E195272E5008BA181 /* hands@2x.png */,
+			);
+			name = Hands;
+			sourceTree = "<group>";
+		};
+		EDAF98F4D0B44DE78994A09C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				22DD41AECA8B4A1C987F198A /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F1B587EE19533A1D00BC1FF6 /* Plus One */ = {
+			isa = PBXGroup;
+			children = (
+				F1B587F319533B3E00BC1FF6 /* plusone.png */,
+				F1B587F119533A7500BC1FF6 /* plusone@2x.png */,
+			);
+			name = "Plus One";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0914899D194CE20F008D2E38 /* camerataker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 091489BA194CE20F008D2E38 /* Build configuration list for PBXNativeTarget "camerataker" */;
+			buildPhases = (
+				9CF889BF58B74DB8A0A6BF56 /* Check Pods Manifest.lock */,
+				0914899A194CE20F008D2E38 /* Sources */,
+				0914899B194CE20F008D2E38 /* Frameworks */,
+				0914899C194CE20F008D2E38 /* Resources */,
+				D3F1DC3AE12A4AE9AA5BA35B /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = camerataker;
+			productName = camerataker;
+			productReference = 0914899E194CE20F008D2E38 /* camerataker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		091489AF194CE20F008D2E38 /* cameratakerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 091489BD194CE20F008D2E38 /* Build configuration list for PBXNativeTarget "cameratakerTests" */;
+			buildPhases = (
+				091489AC194CE20F008D2E38 /* Sources */,
+				091489AD194CE20F008D2E38 /* Frameworks */,
+				091489AE194CE20F008D2E38 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				091489B2194CE20F008D2E38 /* PBXTargetDependency */,
+			);
+			name = cameratakerTests;
+			productName = cameratakerTests;
+			productReference = 091489B0194CE20F008D2E38 /* cameratakerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		09148996194CE20F008D2E38 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = Skippers;
+				TargetAttributes = {
+					0914899D194CE20F008D2E38 = {
+						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = P3FTU9Z297;
+					};
+					091489AF194CE20F008D2E38 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 0914899D194CE20F008D2E38;
+					};
+				};
+			};
+			buildConfigurationList = 09148999194CE20F008D2E38 /* Build configuration list for PBXProject "camerataker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 09148995194CE20F008D2E38;
+			productRefGroup = 0914899F194CE20F008D2E38 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0914899D194CE20F008D2E38 /* camerataker */,
+				091489AF194CE20F008D2E38 /* cameratakerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0914899C194CE20F008D2E38 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				098F650B195272D0008BA181 /* head@2x.png in Resources */,
+				091489A9194CE20F008D2E38 /* Main.storyboard in Resources */,
+				098F64F419522736008BA181 /* photoicon.png in Resources */,
+				F1B587F219533A7500BC1FF6 /* plusone@2x.png in Resources */,
+				098F64F819522744008BA181 /* checkboxgrey.png in Resources */,
+				098F64F519522736008BA181 /* photoicon@2x.png in Resources */,
+				098F650F195272E5008BA181 /* hands.png in Resources */,
+				098F64F119522727008BA181 /* checkboxgreen@2x.png in Resources */,
+				098F651419527326008BA181 /* checkboxblack@2x.png in Resources */,
+				098F6510195272E5008BA181 /* hands@2x.png in Resources */,
+				098F651319527326008BA181 /* checkboxblack.png in Resources */,
+				098F64F019522727008BA181 /* checkboxgreen.png in Resources */,
+				098F64FF195257CC008BA181 /* wallpaper.png in Resources */,
+				098F6500195257CC008BA181 /* wallpaper@2x.png in Resources */,
+				098F650A195272D0008BA181 /* head.png in Resources */,
+				098F64F919522744008BA181 /* checkboxgrey@2x.png in Resources */,
+				F1B587F419533B3E00BC1FF6 /* plusone.png in Resources */,
+				091489AB194CE20F008D2E38 /* Images.xcassets in Resources */,
+				098F6504195257E9008BA181 /* title.png in Resources */,
+				098F6505195257E9008BA181 /* title@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		091489AE194CE20F008D2E38 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9CF889BF58B74DB8A0A6BF56 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D3F1DC3AE12A4AE9AA5BA35B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0914899A194CE20F008D2E38 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				091489A6194CE20F008D2E38 /* ViewController.swift in Sources */,
+				098F0480194E868B004FBE48 /* ViewControllerGet.swift in Sources */,
+				091489A4194CE20F008D2E38 /* AppDelegate.swift in Sources */,
+				09890D0B194F731800E2BC76 /* ViewControllerHome.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		091489AC194CE20F008D2E38 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				091489B7194CE20F008D2E38 /* cameratakerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		091489B2194CE20F008D2E38 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0914899D194CE20F008D2E38 /* camerataker */;
+			targetProxy = 091489B1194CE20F008D2E38 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		091489A7194CE20F008D2E38 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				091489A8194CE20F008D2E38 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		091489B8194CE20F008D2E38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		091489B9194CE20F008D2E38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		091489BB194CE20F008D2E38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9034BAB0F0A4133A7133947 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = camerataker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "camerataker/camerataker-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		091489BC194CE20F008D2E38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9034BAB0F0A4133A7133947 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = camerataker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "camerataker/camerataker-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		091489BE194CE20F008D2E38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/camerataker.app/camerataker";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = cameratakerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		091489BF194CE20F008D2E38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/camerataker.app/camerataker";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = cameratakerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		09148999194CE20F008D2E38 /* Build configuration list for PBXProject "camerataker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				091489B8194CE20F008D2E38 /* Debug */,
+				091489B9194CE20F008D2E38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		091489BA194CE20F008D2E38 /* Build configuration list for PBXNativeTarget "camerataker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				091489BB194CE20F008D2E38 /* Debug */,
+				091489BC194CE20F008D2E38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		091489BD194CE20F008D2E38 /* Build configuration list for PBXNativeTarget "cameratakerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				091489BE194CE20F008D2E38 /* Debug */,
+				091489BF194CE20F008D2E38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 09148996194CE20F008D2E38 /* Project object */;
+}
