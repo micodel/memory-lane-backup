@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		091489A4194CE20F008D2E38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091489A3194CE20F008D2E38 /* AppDelegate.swift */; };
-		091489A6194CE20F008D2E38 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091489A5194CE20F008D2E38 /* ViewController.swift */; };
+		091489A6194CE20F008D2E38 /* ViewControllerPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091489A5194CE20F008D2E38 /* ViewControllerPost.swift */; };
 		091489A9194CE20F008D2E38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 091489A7194CE20F008D2E38 /* Main.storyboard */; };
 		091489AB194CE20F008D2E38 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 091489AA194CE20F008D2E38 /* Images.xcassets */; };
 		091489B7194CE20F008D2E38 /* cameratakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091489B6194CE20F008D2E38 /* cameratakerTests.swift */; };
@@ -50,7 +50,7 @@
 		0914899E194CE20F008D2E38 /* camerataker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = camerataker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		091489A2194CE20F008D2E38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		091489A3194CE20F008D2E38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		091489A5194CE20F008D2E38 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		091489A5194CE20F008D2E38 /* ViewControllerPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPost.swift; sourceTree = "<group>"; };
 		091489A8194CE20F008D2E38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		091489AA194CE20F008D2E38 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		091489B0194CE20F008D2E38 /* cameratakerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cameratakerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,7 +131,7 @@
 			children = (
 				098F64E8195226AC008BA181 /* Assets */,
 				091489A3194CE20F008D2E38 /* AppDelegate.swift */,
-				091489A5194CE20F008D2E38 /* ViewController.swift */,
+				091489A5194CE20F008D2E38 /* ViewControllerPost.swift */,
 				098F047F194E868B004FBE48 /* ViewControllerGet.swift */,
 				09890D0A194F731800E2BC76 /* ViewControllerHome.swift */,
 				091489A7194CE20F008D2E38 /* Main.storyboard */,
@@ -434,7 +434,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				091489A6194CE20F008D2E38 /* ViewController.swift in Sources */,
+				091489A6194CE20F008D2E38 /* ViewControllerPost.swift in Sources */,
 				098F0480194E868B004FBE48 /* ViewControllerGet.swift in Sources */,
 				091489A4194CE20F008D2E38 /* AppDelegate.swift in Sources */,
 				09890D0B194F731800E2BC76 /* ViewControllerHome.swift in Sources */,
