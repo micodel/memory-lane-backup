@@ -6,6 +6,9 @@
 //  Copyright (c) 2014 Skippers. All rights reserved.
 //
 
+
+// COULD THIS PAGE BE A MANUALLY CODED VIEW THAT SITS ON TOP OF HOME PAGE AND IS HIDDEN INSTEAD OF A TRANSITION. SINCE THE HOME PAGE IS LOADING THE IMAGE AND THEN NOT USING? THIS PAGE HAS TO RELOAD A NEW IMAGE? "BACK" BUTTON COULD THEN REHIDE THE IMAGE AND RESET THE VARIABLES.
+
 import UIKit
 import CoreLocation
 
@@ -20,8 +23,6 @@ class ViewControllerGet: UIViewController, UIImagePickerControllerDelegate, UINa
     @IBOutlet var youLatDisplay : UILabel = nil
     @IBOutlet var youLongDisplay : UILabel = nil
  
-
-    
     
     // after the view loads, start getting location
     override func viewDidLoad() {        
@@ -32,7 +33,6 @@ class ViewControllerGet: UIViewController, UIImagePickerControllerDelegate, UINa
         
         
         super.viewDidLoad()
-//        self.navigationController.navigationBar.hidden = false;
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.startUpdatingLocation()
@@ -60,22 +60,17 @@ class ViewControllerGet: UIViewController, UIImagePickerControllerDelegate, UINa
         
         self.youLatDisplay.text = answerLat
         self.youLongDisplay.text = answerLong
-//        self.changeTextView.text = "There's no memory here \n\nCreate one in this spot for the next person to stumble on.  \n\nAnd keep walking around to find one in your neighborhood."
-        println("test1")
 
         var testLocation = CLLocation(latitude: myLat, longitude: myLong)
         self.fetchImageWithCLLocation(testLocation, handler: {
             (response: NSURLResponse!, image: UIImage!, error: NSError!) in
             if (!error)
             {
-                // Success! We got back an image...bind the image returned in the closure to the changeImage UIImageView
-                
                 weakSelf!.changeImage.image = image
                 self.changeTextView.text = self.textHacker
                 
             }
         })
-        println("test2")
     }
     
     func locationManager(manager:CLLocationManager!, didUpdateLocations locations:CLLocation[])
@@ -90,35 +85,9 @@ class ViewControllerGet: UIViewController, UIImagePickerControllerDelegate, UINa
     }
     
     
-// SID SET THIS UP FOR OUR LOGIC TO CHECK ONCE EVERY CHANGE IN X FEET
-//    func locationManager(manager:CLLocationManager!, didUpdateLocations locations:CLLocation[])
-//    {
-//        // locations array will contain CLLocation objects in chronological order - Most recent first
-//        // For our case, we shoud only need to get the first object in this array
-//        
-//        // Grab the latitude and long from this CLLocation object
-//        // call method to fetch image from services (backend) using lat/long
-//        // ex. - func fetchImageWithCLLocation(location: CLLocation, handler: {(image: UIImage, error: NSError)()}.....handler should be a closure
-//        var mostRecentLocation = locations[0]
-//        weak var weakSelf : ViewControllerGet? = self
-//   // ON BUTTON CLICK....
-//        // the variable 'handler' is a closure that gets executed once a response comes back from the backend
-//        self.fetchImageWithCLLocation(mostRecentLocation, handler: {
-//            (response: NSURLResponse!, image: UIImage!, error: NSError!) in
-//            if (error)
-//            {
-//                // Success! We got back an image...bind the image returned in the closure to the changeImage UIImageView
-//                weakSelf!.changeImage.image = image
-//            }
-//        })
-//    }
-    
     
     func fetchImageWithCLLocation(location: CLLocation?, handler: ((NSURLResponse!, UIImage!, NSError!) -> Void)!) {
-        println("--- fetch Image with Location")
-        //TODO: fetch memory text with CLLOcation.  change method need.  need to return both text and image.
-        // Create NSURLRequest object with correct properties set (base url, endpoint, url parameters, any post data, headers, etc.)
-        // Make asynchronous call using NSURLConnection using sendAsynchronousRequest (use NSOperationQueue.mainOperationQueue as the operation queue for method, pass handler as the last parameter of the method call)
+        
         if (!location) {
             return;
         }
@@ -141,10 +110,6 @@ class ViewControllerGet: UIViewController, UIImagePickerControllerDelegate, UINa
                 var urlToImage : AnyObject? = urlDictionary["url"] as AnyObject?
                 var textDictionary : NSString = jsonResult!["text"] as NSString
                 self.textHacker = textDictionary
-
-                println(urlDictionary)
-                println(urlToImage)
-                println(textDictionary)
                 
                 weak var weakSelf : ViewControllerGet? = self
                 if (urlToImage) {
@@ -176,7 +141,6 @@ class ViewControllerGet: UIViewController, UIImagePickerControllerDelegate, UINa
     }
     
     func parameterizedURLFromLocation(location: CLLocation, baseURL: String) -> String {
-        println("\(baseURL)?latitude=\(location.coordinate.latitude)&longitude=\(location.coordinate.longitude)")
         return  "\(baseURL)?latitude=\(location.coordinate.latitude)&longitude=\(location.coordinate.longitude)"
     }
 }

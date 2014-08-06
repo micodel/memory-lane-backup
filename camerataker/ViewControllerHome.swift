@@ -11,33 +11,41 @@ import CoreLocation
 
 class ViewControllerHome: UIViewController, UINavigationControllerDelegate , UITextFieldDelegate, CLLocationManagerDelegate {
 
-
-    @IBOutlet var changeMemImage : UIImageView
+    @IBOutlet var plusOneImage : UIImageView
     
     let locationManager = CLLocationManager()
-    var textHacker = ""
+
+    // (re)Defines shouldDisplayPlusOne string to empty, Used to hide plusOneImage or not.
+    // Can we change this to a boolean variable instead of keeping entire image JSON object as a string?
+    var shouldDisplayPlusOne = ""
     
     // after the view loads, start getting location
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Hides the navigation bar inheriteted from the navigation controller.
         self.navigationController.navigationBar.hidden = true;
-        self.textHacker != ""
-        self.changeMemImage.hidden = true
+        // Is this line useless?
+        self.shouldDisplayPlusOne != ""
+        // Does not display plusOneImage
+        self.plusOneImage.hidden = true
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        // Keeps reloading user location, to be used in finding a memory and deciding to display plusOneImage.
         locationManager.startUpdatingLocation()
         
         weak var weakSelf : ViewControllerHome? = self;
-        var myLat = locationManager.location.coordinate.latitude
-        var myLong = locationManager.location.coordinate.longitude
         
-        var testLocation = CLLocation(latitude: myLat, longitude: myLong)
+        // Storing lat and long into variables. This is (re)done in other views. Could it be consolidated?
+        var currentLatitude = locationManager.location.coordinate.latitude
+        var currentLongitude = locationManager.location.coordinate.longitude
+        
+        var testLocation = CLLocation(latitude: currentLatitude, longitude: currentLongitude)
         self.fetchImageWithCLLocation(testLocation, handler: {
             (response: NSURLResponse!, image: UIImage!, error: NSError!) in
             if (!error) {
                 // Success! We got back an image...bind the image returned in the closure to the changeImage UIImageView
-                if self.textHacker != "" {
-                    self.changeMemImage.hidden = false
+                if self.shouldDisplayPlusOne != "" {
+                    self.plusOneImage.hidden = false
                     
                 }
             }
@@ -48,13 +56,11 @@ class ViewControllerHome: UIViewController, UINavigationControllerDelegate , UIT
         var mostRecentLocation = locations[0]
     }
 
-    // standard
+    // System Functions
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    
-
     
     func fetchImageWithCLLocation(location: CLLocation?, handler: ((NSURLResponse!, UIImage!, NSError!) -> Void)!) {
         if (!location) {
@@ -77,7 +83,7 @@ class ViewControllerHome: UIViewController, UINavigationControllerDelegate , UIT
                 var urlDictionary : NSDictionary = jsonResult!["image"] as NSDictionary
                 var urlToImage : AnyObject? = urlDictionary["url"] as AnyObject?
                 var textDictionary : NSString = jsonResult!["text"] as NSString
-                self.textHacker = textDictionary
+                self.shouldDisplayPlusOne = textDictionary
                 
                 weak var weakSelf : ViewControllerHome? = self
                 if (urlToImage) {

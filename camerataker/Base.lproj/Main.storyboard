@@ -42,19 +42,13 @@
                                 <rect key="frame" x="100" y="355" width="35" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Moments of serendipitous discovery with community sharing" textAlignment="center" id="EP8-ju-aGM">
-                                <rect key="frame" x="40" y="151" width="240" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="n3K-Ui-d41"/>
                     <connections>
                         <outlet property="changeMemImage" destination="oQq-yh-16V" id="ac3-b8-5AN"/>
+                        <outlet property="plusOneImage" destination="oQq-yh-16V" id="DGJ-dh-N2v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gYE-P8-Pxu" userLabel="First Responder" sceneMemberID="firstResponder"/>

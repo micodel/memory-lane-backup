@@ -44,6 +44,7 @@ class ViewController:
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         // This has a default value of best, can we clean this up be excluding this line?
+        // This data is already available from the pinging done on the homepage. Can that value be pulled in when create memory button is pressed. Users should not be moving around too much when creating a memory.
         locationManager.startUpdatingLocation()
         // Continually checks current location.
         
@@ -88,7 +89,9 @@ class ViewController:
     
     // opens the camera when you hit the "Take Photo" button until "Use Photo" is confirmed
     // the the camera closes
+    // Connects takePhoto button to IBAction. Executes the following block upon click of that button.
     @IBAction func takePhoto(sender : UIButton) {
+        // Built in methods that opens the built in camera feature. Using the built in functionality, returns the chosen picture to the variable "image".
         var image = UIImagePickerController()
         image.delegate = self
         image.sourceType = UIImagePickerControllerSourceType.Camera
@@ -99,9 +102,14 @@ class ViewController:
     
     //Initialize camera data string
     func imagePickerController(image: UIImagePickerController, didFinishPickingMediaWithInfo info: NSDictionary) {
+        // Calls the image that was chosen by the user, currently floating in the take a photo method.
         var chosenImage: UIImage = info[UIImagePickerControllerOriginalImage] as UIImage
+        // Sets image view to picture taken by camera back on view page.
+        // This is does before the camera closes so the user does not have to see it load.
         self.imageView.image = chosenImage
+        // Closes the take a picture (built in) view.
         self.dismissModalViewControllerAnimated(true)
+        // Reformats image data to be stored in database.
         var imageData: NSData = UIImageJPEGRepresentation(chosenImage, 0.1)
     }
     
@@ -114,7 +122,7 @@ class ViewController:
 
             var counterlat = 0
             var counterlong = 0
-            
+            // Regexing / formating lat and long to be used?
             for x in "\(myLat)" {
                 if x == "." { counterlat = 1 }
                 if counterlat < 8 { answerLat += x }
@@ -132,12 +140,15 @@ class ViewController:
     
     // submit memory button
     @IBAction func btnCaptureMem(sender : UIButton) {
+        // Validates memory to be saved have both text and an image.
         if (imageView.image == nil) {changeError.text="Please enter both text and an image to submit"}
         else if (textMem.text == "") {changeError.text="Please enter both text and an image to submit"}
         else {
+            // If validated, locks in memory text and disables editing of text field.
             var myText = textMem.text
             self.view.endEditing(true)
             
+            // URL contianting API, to push memory memory to.
             var url = "http://nameless-reaches-8687.herokuapp.com/memories"
             
             let manager = AFHTTPRequestOperationManager()
@@ -151,17 +162,22 @@ class ViewController:
                 success: {(operation, response) -> Void in
                     println(response)
                 },
+                // This prompts the user that memory was created even when it fails...
                 failure: {(operation, response) -> Void in
                     println(response)
                 })
             
+            // Defines pop up alert displayed to user when a memory is submitted to database.
             let alert = UIAlertView()
             alert.title = "Memory Created!"
             alert.message = "You have shared a memory for the world to experience."
+            // This is the button you click to close/move on...
+            // Why...
             alert.addButtonWithTitle("the world ♥'s you")
             alert.show()
             alert.delegate = nil
             
+            // Resets new memory fields to nil.
             textMem.text = ""
             imageView.image = nil
             changeError.text=""
